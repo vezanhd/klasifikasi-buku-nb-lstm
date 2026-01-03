@@ -46,3 +46,61 @@ df = df[['judul', 'kategori_utama','bahasa']]
 # Cek hasil akhir
 print("Jumlah data:", df.shape[0])
 df.head()
+
+------ Preprocessing Teks -----
+# Lower Casing
+df['judul'] = df['judul'].str.lower()
+
+# Penghapusan Stopword
+import nltk
+from nltk.corpus import stopwords
+# 1. Persiapan Stopwords
+stopwords_id = set(stopwords.words('indonesian'))
+stopwords_en = set(stopwords.words('english'))
+stop_words = stopwords_id.union(stopwords_en)
+# 2. Membuat Fungsi Stopword
+def remove_stopwords_safe(text):
+    text = str(text)
+    # Proses filter kata
+    words = [word for word in text.split() if word not in stop_words]
+    # Gabungkan kembali
+    cleaned_text = ' '.join(words)
+    # --- LOGIKA PENYELAMATAN DATA ---
+    # Jika hasil cleaning kosong (berarti judul isinya stopword semua),
+    # kembalikan teks aslinya agar tidak hilang.
+    if not cleaned_text.strip():
+        return text
+    return cleaned_text
+# Terapkan fungsi baru ke kolom 'judul'
+df['judul_no_stopword'] = df['judul'].apply(remove_stopwords_safe)
+
+# Stemming
+# Install Sastrawi
+!pip install Sastrawi
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+from nltk.stem import PorterStemmer
+from tqdm import tqdm # Untuk progress bar
+# 1. Inisialisasi Stemmer
+# Stemmer Indonesia (Sastrawi)
+factory = StemmerFactory()
+stemmer_id = factory.create_stemmer()
+# Stemmer Inggris (PorterStemmer)
+stemmer_en = PorterStemmer()
+# Aktifkan tqdm untuk pandas agar kelihatan progress-nya
+tqdm.pandas()
+# 2. Membuat Fungsi Stemming
+def hybrid_stemming(row):
+    text = str(row['judul_no_stopword']) # Ambil dari hasil stopword
+    lang = row['bahasa']
+    # Logika pemilihan stemmer
+    if lang == 'Indonesia':
+        return stemmer_id.stem(text)
+    else:
+        # Untuk Inggris, kita split dulu per kata, stem, lalu gabung lagi
+        return ' '.join([stemmer_en.stem(word) for word in text.split()])
+# 3. Terapkan ke Dataframe 
+# axis=1 artinya fungsi membaca per baris (supaya bisa cek kolom 'bahasa')
+df['judul_bersih'] = df.progress_apply(hybrid_stemming, axis=1)
+
+# Cek Hasil Akhir Dataframe Bersih
+df.head(10)
