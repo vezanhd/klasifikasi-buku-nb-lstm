@@ -1,4 +1,4 @@
-Ini Proses Implementasi Algoritma Naive Bayes varian model terbaik, yaitu Deep Feature Weighting Naïve Bayes (DFWNB)
+# Ini Proses Implementasi Algoritma Naive Bayes varian model terbaik, yaitu Deep Feature Weighting Naïve Bayes (DFWNB)
 
 # Rangkuman Parameter Naive Bayes (DFWNB):
 Penanganan Data = Undersampling (Data Seimbang)	==> Target ~500 data per kelas
