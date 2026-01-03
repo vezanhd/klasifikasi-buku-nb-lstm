@@ -22,11 +22,3 @@ ALGORITMA NAÏVE BAYES DAN LSTM
 
 ## Catatan
 Repository ini dibuat sebagai lampiran skripsi.
-
-import pandas as pd
-
-# Membaca file dan set header di baris pertama (indeks 0)
-df = pd.read_excel("elib inlis migrasi koleksi.xlsx", header=1)
-
-# Tampilkan 5 baris pertama
-df.head()
