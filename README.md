@@ -26,10 +26,8 @@ ALGORITMA NAÏVE BAYES DAN LSTM
 ## Alur Kerja
 1.  Data Preparation
 2.  Modeling (Source Code yang dilampirkan model dengan hasik terbaik untuk setiap algoritma):
-
-a. Naive Bayes
-b. LSTM
-
+- Naive Bayes
+- LSTM
 3. Deployment Sederhana Menggunakan Flask dengan model terbaik (Disini adalah model LSTM)
 
 ## Catatan
