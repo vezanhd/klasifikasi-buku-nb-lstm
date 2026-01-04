@@ -1,4 +1,4 @@
-# Klasifikasi Kategori Buku Menggunakan Naïve Bayes dan LSTM
+# Klasifikasi Kategori Buku Berdasarkan Judul Menggunakan Naïve Bayes dan LSTM
 
 Repository ini berisi dataset dan source code yang digunakan dalam skripsi:
 
@@ -9,16 +9,26 @@ ALGORITMA NAÏVE BAYES DAN LSTM
 
 ## Struktur Folder
 - `dataset/` : Dataset judul buku dan kategorinya
-- `naive_bayes/` : Implementasi algoritma Naïve Bayes
-- `lstm/` : Implementasi algoritma LSTM
-- `notebook/` : Notebook eksperimen
-- `requirements.txt` : Library yang digunakan
+- `datapreparation/` : Persiapan Data Sebelum ke Tahap Modeling
+- `modeling_LSTM/` : Implementasi algoritma LSTM dengan menggunakan data bersih hasil data preparation
+- `modeling_NB/` : Implementasi algoritma Naive Bayes dengan menggunakan data bersih hasil data preparation
+- `app_klasifikasi_buku` : Deployment Aplikasi Sederhana Menggunakan Flask
 
 ## Tools & Library
+- Google Colab
 - Python
 - scikit-learn
 - TensorFlow / Keras
-- pandas, numpy
+- pandas, numpy, matplotlib, seaborn
+- VsCode
+- Flask
+
+## Alur Kerja
+1.  Data Preparation
+2.  Modeling (Source Code yang dilampirkan model dengan hasik terbaik untuk setiap algoritma)
+   a. Naive Bayes 
+   b. LSTM
+3. Deployment Sederhana Menggunakan Flask dengan model terbaik (Disini adalah model LSTM)
 
 ## Catatan
 Repository ini dibuat sebagai lampiran skripsi.
