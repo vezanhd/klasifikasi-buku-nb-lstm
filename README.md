@@ -12,7 +12,7 @@ ALGORITMA NAÏVE BAYES DAN LSTM
 - `datapreparation/` : Persiapan Data Sebelum ke Tahap Modeling
 - `modeling_LSTM/` : Implementasi algoritma LSTM dengan menggunakan data bersih hasil data preparation
 - `modeling_NB/` : Implementasi algoritma Naive Bayes dengan menggunakan data bersih hasil data preparation
-- `app_klasifikasi_buku` : Deployment Aplikasi Sederhana Menggunakan Flask
+- `app_klasifikasi_buku/` : Deployment Aplikasi Sederhana Menggunakan Flask
 
 ## Tools & Library
 - Google Colab
