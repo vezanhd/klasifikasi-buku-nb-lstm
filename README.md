@@ -1,34 +1,31 @@
-# Klasifikasi Kategori Buku Berdasarkan Judul Menggunakan Naïve Bayes dan LSTM
+# Klasifikasi Kategori Buku Berdasarkan Judul Menggunakan Naïve Bayes & LSTM
 
-Repository ini berisi dataset dan source code yang digunakan dalam skripsi:
+**Lampiran Skripsi** • Teknik Informatika • Universitas Lampung  
+**Akurasi terbaik: 79.30%** (LSTM)
 
-**Judul Skripsi:**  
-KLASIFIKASI KATEGORI BUKU BERDASARKAN JUDUL MENGGUNAKAN  
-ALGORITMA NAÏVE BAYES DAN LSTM  
-(Studi Kasus: UPA Perpustakaan Universitas Lampung)
+Proyek ini mengembangkan dua model klasifikasi teks untuk mengkategorikan buku berdasarkan judulnya (studi kasus: UPA Perpustakaan Universitas Lampung).
 
-## Struktur Folder
-- `dataset/` : Dataset judul buku dan kategorinya
-- `datapreparation/` : Persiapan Data Sebelum ke Tahap Modeling
-- `modeling_LSTM/` : Implementasi algoritma LSTM dengan menggunakan data bersih hasil data preparation
-- `modeling_NB/` : Implementasi algoritma Naive Bayes dengan menggunakan data bersih hasil data preparation
-- `app_klasifikasi_buku/` : Deployment Aplikasi Sederhana Menggunakan Flask
+## 🎯 Fitur Utama
+- Preprocessing teks (cleaning, tokenisasi, TF-IDF)
+- Model **Naïve Bayes** (scikit-learn)
+- Model **LSTM** (TensorFlow/Keras)
+- Perbandingan performa kedua model
+- Web app sederhana dengan **Flask** (deploy model terbaik)
 
-## Tools & Library
-- Google Colab
-- Python
-- scikit-learn
-- TensorFlow / Keras
-- pandas, numpy, matplotlib, seaborn
-- VsCode
-- Flask
+## 📊 Hasil
+| Model          | Akurasi   | Keterangan                  |
+|----------------|-----------|-----------------------------|
+| Naïve Bayes    | ~69%      | Cepat & ringan              |
+| **LSTM**       | **79.30%**| Lebih baik pada data kompleks |
 
-## Alur Kerja
-1.  Data Preparation
-2.  Modeling (Source Code yang dilampirkan model dengan hasil terbaik untuk setiap algoritma):
-- Naive Bayes
-- LSTM
-3. Deployment Sederhana Menggunakan Flask dengan model terbaik (Disini adalah model LSTM)
+## 🛠️ Tech Stack
+- **Python** • Google Colab
+- scikit-learn • TensorFlow/Keras • pandas • numpy • matplotlib
+- Flask (Deployment)
 
-## Catatan
-Repository ini dibuat sebagai lampiran skripsi.
+## 📁 Struktur Folder
+dataset/                  ← Data yang dipakai
+datapreparation/          ← Script cleaning & preprocessing
+modeling_nb/              ← Model Naïve Bayes
+modeling_LSTM/            ← Model LSTM + training
+app_klasifikasi_buku/     ← Codingan Web app Flask
