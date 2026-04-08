@@ -33,16 +33,22 @@ app_klasifikasi_buku/     ← Codingan Web app Flask
 ## 📸 Screenshot & Demo
 Naive Bayes
 - Confusion Matrix
+  
   <img width="526" height="471" alt="image" src="https://github.com/user-attachments/assets/5a2a4977-caa6-4ac4-bd75-7e6c2dc34006" />
 - Hasil Pengujian
+  
   <img width="543" height="183" alt="image" src="https://github.com/user-attachments/assets/d8ff55b2-bcfa-45e1-8579-95527077009e" />
 LSTM
 - Grafik Akurasi dan Loss
+  
   <img width="537" height="285" alt="image" src="https://github.com/user-attachments/assets/2e42650b-0512-4734-8952-42f5ecce1fee" />
+  
   <img width="528" height="291" alt="image" src="https://github.com/user-attachments/assets/3797fbaa-b545-40e0-bfc0-394dd246eb96" />
 - Confusion Matrix
+  
   <img width="523" height="452" alt="image" src="https://github.com/user-attachments/assets/08a1be3e-2278-48b5-a4e4-5fee63ec6518" />
 - Hasil Pengujian
+  
   <img width="535" height="603" alt="image" src="https://github.com/user-attachments/assets/4f44a409-67db-44c8-89d0-818fb489b0ac" />
 
 
