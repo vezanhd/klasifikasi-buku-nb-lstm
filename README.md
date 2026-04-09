@@ -51,6 +51,9 @@ LSTM
   
   <img width="535" height="603" alt="image" src="https://github.com/user-attachments/assets/4f44a409-67db-44c8-89d0-818fb489b0ac" />
 
+Tampilan Aplikasi
+
+<img width="827" height="495" alt="image" src="https://github.com/user-attachments/assets/3eec1b2f-5c68-485b-8445-1d32851ec5a4" />
 
 
 
